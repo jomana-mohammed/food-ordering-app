@@ -1,0 +1,215 @@
+{
+  "common": {
+    "appName": "فودي إكسبريس",
+    "loading": "جاري التحميل...",
+    "error": "حدث خطأ ما",
+    "retry": "حاول مجداً",
+    "cancel": "إلغاء",
+    "save": "حفظ",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "add": "إضافة",
+    "close": "إغلاق",
+    "confirm": "تأكيد",
+    "back": "رجوع",
+    "next": "التالي",
+    "submit": "إرسال",
+    "search": "بحث",
+    "filter": "تصفية",
+    "all": "الكل",
+    "yes": "نعم",
+    "no": "لا"
+  },
+  "nav": {
+    "home": "الرئيسية",
+    "cart": "سلة التسوق",
+    "orders": "طلباتي",
+    "login": "تسجيل الدخول",
+    "register": "إنشاء حساب",
+    "logout": "تسجيل الخروج",
+    "admin": "لوحة التحكم",
+    "language": "English",
+    "itemsInCart": "{count} عناصر في السلة"
+  },
+  "home": {
+    "hero": {
+      "title": "طعام شهي، توصيل سريع",
+      "subtitle": "اطلب من أفضل المطاعم في مدينتك",
+      "cta": "اطلب الآن"
+    },
+    "categories": {
+      "all": "الكل",
+      "burgers": "برغر",
+      "pizza": "بيتزا",
+      "drinks": "مشروبات",
+      "desserts": "حلويات",
+      "salads": "سلطات"
+    },
+    "searchPlaceholder": "ابحث عن الطعام...",
+    "noResults": "لا توجد منتجات",
+    "noResultsHint": "جرب تعديل البحث أو التصفية",
+    "addToCart": "أضف للسلة",
+    "outOfStock": "غير متاح"
+  },
+  "cart": {
+    "title": "سلة التسوق",
+    "empty": "سلة التسوق فارغة",
+    "emptyHint": "أضف بعض العناصر اللذيذة للبدء",
+    "subtotal": "المجموع الفرعي",
+    "total": "الإجمالي",
+    "checkout": "إتمام الطلب",
+    "continueShopping": "مواصلة التسوق",
+    "remove": "إزالة",
+    "itemAdded": "تمت إضافة العنصر!",
+    "itemRemoved": "تمت إزالة العنصر"
+  },
+  "checkout": {
+    "title": "إتمام الطلب",
+    "deliveryAddress": "عنوان التوصيل",
+    "street": "عنوان الشارع",
+    "city": "المدينة",
+    "phone": "رقم الهاتف",
+    "paymentMethod": "طريقة الدفع",
+    "payOnline": "الدفع أونلاين (Stripe)",
+    "cashOnDelivery": "الدفع عند الاستلام",
+    "cardDetails": "تفاصيل البطاقة",
+    "placeOrder": "تأكيد الطلب",
+    "orderSummary": "ملخص الطلب",
+    "processing": "جاري المعالجة...",
+    "streetPlaceholder": "أدخل عنوان الشارع",
+    "cityPlaceholder": "أدخل المدينة",
+    "phonePlaceholder": "أدخل رقم هاتفك"
+  },
+  "orders": {
+    "title": "طلباتي",
+    "empty": "لا توجد طلبات بعد",
+    "emptyHint": "ابدأ بطلب طعامك المفضل!",
+    "orderNumber": "طلب رقم #{id}",
+    "placedOn": "تم الطلب في {date}",
+    "items": "{count} عناصر",
+    "total": "الإجمالي",
+    "paymentMethod": "طريقة الدفع",
+    "paymentStatus": "حالة الدفع",
+    "orderStatus": "حالة الطلب",
+    "status": {
+      "pending": "قيد الانتظار",
+      "confirmed": "مؤكد",
+      "preparing": "جاري التحضير",
+      "out_for_delivery": "في الطريق إليك",
+      "delivered": "تم التوصيل",
+      "cancelled": "ملغى"
+    },
+    "payment": {
+      "online": "أونلاين",
+      "cash": "دفع عند الاستلام",
+      "paid": "مدفوع",
+      "unpaid": "غير مدفوع"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "مرحباً بعودتك",
+      "subtitle": "سجل دخولك إلى حسابك",
+      "email": "البريد الإلكتروني",
+      "password": "كلمة المرور",
+      "submit": "تسجيل الدخول",
+      "noAccount": "ليس لديك حساب؟",
+      "register": "سجل الآن",
+      "emailPlaceholder": "أدخل بريدك الإلكتروني",
+      "passwordPlaceholder": "أدخل كلمة المرور"
+    },
+    "register": {
+      "title": "إنشاء حساب",
+      "subtitle": "انضم إلينا اليوم",
+      "name": "الاسم الكامل",
+      "email": "البريد الإلكتروني",
+      "password": "كلمة المرور",
+      "confirmPassword": "تأكيد كلمة المرور",
+      "submit": "إنشاء الحساب",
+      "hasAccount": "لديك حساب بالفعل؟",
+      "login": "تسجيل الدخول",
+      "namePlaceholder": "أدخل اسمك الكامل",
+      "emailPlaceholder": "أدخل بريدك الإلكتروني",
+      "passwordPlaceholder": "أنشئ كلمة مرور",
+      "confirmPasswordPlaceholder": "أكد كلمة المرور"
+    },
+    "errors": {
+      "invalidCredentials": "البريد الإلكتروني أو كلمة المرور غير صحيحة",
+      "emailTaken": "البريد الإلكتروني مسجل بالفعل",
+      "passwordMismatch": "كلمتا المرور غير متطابقتين"
+    }
+  },
+  "admin": {
+    "title": "لوحة التحكم",
+    "overview": "نظرة عامة",
+    "products": "المنتجات",
+    "orders": "الطلبات",
+    "stats": {
+      "totalOrders": "إجمالي الطلبات",
+      "pendingOrders": "الطلبات المعلقة",
+      "todayRevenue": "إيرادات اليوم",
+      "totalRevenue": "إجمالي الإيرادات"
+    },
+    "productsTab": {
+      "title": "إدارة المنتجات",
+      "addProduct": "إضافة منتج",
+      "table": {
+        "image": "الصورة",
+        "name": "الاسم",
+        "category": "الفئة",
+        "price": "السعر",
+        "available": "متاح",
+        "actions": "الإجراءات"
+      },
+      "form": {
+        "nameEn": "الاسم (إنجليزي)",
+        "nameAr": "الاسم (عربي)",
+        "descriptionEn": "الوصف (إنجليزي)",
+        "descriptionAr": "الوصف (عربي)",
+        "price": "السعر",
+        "category": "الفئة",
+        "image": "رابط الصورة",
+        "available": "متاح",
+        "addTitle": "إضافة منتج",
+        "editTitle": "تعديل المنتج"
+      },
+      "deleteConfirm": "هل أنت متأكد من حذف هذا المنتج؟",
+      "deleteSuccess": "تم حذف المنتج بنجاح",
+      "addSuccess": "تم إضافة المنتج بنجاح",
+      "editSuccess": "تم تحديث المنتج بنجاح"
+    },
+    "ordersTab": {
+      "title": "إدارة الطلبات",
+      "filterByStatus": "تصفية حسب الحالة",
+      "table": {
+        "orderID": "رقم الطلب",
+        "customer": "العميل",
+        "items": "العناصر",
+        "total": "الإجمالي",
+        "payment": "الدفع",
+        "status": "الحالة",
+        "date": "التاريخ",
+        "actions": "الإجراءات"
+      },
+      "updateStatus": "تحديث الحالة",
+      "statusUpdated": "تم تحديث حالة الطلب"
+    }
+  },
+  "confirmation": {
+    "title": "تم تأكيد طلبك!",
+    "subtitle": "تم قبول طلبك بنجاح",
+    "orderNumber": "رقم الطلب",
+    "thankYou": "شكراً لطلبك",
+    "trackOrder": "تتبع طلبك",
+    "continueShopping": "مواصلة التسوق",
+    "paymentNote": "ستتلقى تأكيداً قريباً",
+    "cashNote": "يرجى إعداد المبلغ الدقيق عند التسليم"
+  },
+  "errors": {
+    "notFound": "الصفحة غير موجودة",
+    "notFoundHint": "الصفحة التي تبحث عنها غير موجودة",
+    "goHome": "الذهاب للرئيسية",
+    "unauthorized": "وصول مرفوض",
+    "unauthorizedHint": "ليس لديك صلاحية لعرض هذه الصفحة"
+  }
+}
