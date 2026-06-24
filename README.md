@@ -1,6 +1,7 @@
-# FoodieExpress — Online Food Ordering Web Application
+# FoodieExpress ( Online Food Ordering Web Application )
 
 A premium, production-ready, full-stack Online Food Ordering Web Application built from scratch using Next.js 14, TypeScript, TailwindCSS, MongoDB, and Stripe payments. The application supports dual-language localization (English and Arabic) with bidirectional RTL layout support.
+Live : [FoodieExpress](https://jomana-mohammed-food-ordering-app.vercel.app/en)
 
 ## 🚀 Features
 
@@ -109,6 +110,8 @@ Open [http://localhost:3000](http://localhost:3000) to view the application.
 ## 💳 Stripe Webhook Testing
 
 To test Stripe online payments, use the Stripe CLI to forward events:
+
+## Deployed in Vercel
 ```bash
 stripe listen --forward-to localhost:3000/api/payments/webhook
 ```
