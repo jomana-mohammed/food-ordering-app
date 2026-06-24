@@ -203,7 +203,7 @@ export default function Navbar({ locale }: NavbarProps) {
 
         {/* Mobile menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-white/10 space-y-2 animate-fade-in">
+          <div className="md:hidden py-4 border-t border-white/10 space-y-2 animate-fade-in bg-[#0f0f0f] rounded-b-2xl shadow-2xl shadow-black/50 px-2">
             <Link
               href={`/${locale}`}
               onClick={() => setMobileMenuOpen(false)}

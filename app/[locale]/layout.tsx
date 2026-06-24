@@ -14,6 +14,10 @@ export const metadata: Metadata = {
   description:
     "Order delicious food online with fast delivery to your door. Best burgers, pizza, drinks and more.",
   keywords: "food delivery, online ordering, burgers, pizza, fast food",
+  icons: {
+    icon: "/favicon.png",
+    apple: "/favicon.png",
+  },
   openGraph: {
     title: "FoodieExpress",
     description: "Fast food delivery at your fingertips",
