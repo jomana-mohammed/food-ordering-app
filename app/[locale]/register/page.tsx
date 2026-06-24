@@ -3,16 +3,13 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useAuthStore } from "@/store/authStore";
 import toast from "react-hot-toast";
 
-interface RegisterPageProps {
-  params: { locale: string };
-}
 
 const registerSchema = z
   .object({
@@ -28,7 +25,8 @@ const registerSchema = z
 
 type RegisterFormData = z.infer<typeof registerSchema>;
 
-export default function RegisterPage({ params: { locale } }: RegisterPageProps) {
+export default function RegisterPage() {
+  const locale = useLocale();
   const t = useTranslations("auth.register");
   const router = useRouter();
   const { setUser } = useAuthStore();

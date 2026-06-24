@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 interface Order {
   _id: string;
@@ -23,11 +23,9 @@ interface Order {
   createdAt: string;
 }
 
-interface ConfirmationPageProps {
-  params: { locale: string };
-}
 
-export default function ConfirmationPage({ params: { locale } }: ConfirmationPageProps) {
+export default function ConfirmationPage() {
+  const locale = useLocale();
   const t = useTranslations("confirmation");
   const searchParams = useSearchParams();
   const orderId = searchParams.get("orderId");

@@ -22,10 +22,11 @@ const updateProductSchema = z.object({
 // GET /api/products/:id - Public
 export async function GET(
   _req: NextRequest,
-  { params }: { params: { id: string } }
+  context: any
 ) {
   try {
     await connectDB();
+    const params = await context.params;
     const product = await Product.findById(params.id);
     if (!product) {
       return NextResponse.json(
@@ -44,9 +45,10 @@ export async function GET(
 }
 
 // PUT /api/products/:id - Admin only
-export const PUT = withAdmin(async (req, { params }) => {
+export const PUT = withAdmin(async (req, context) => {
   try {
     await connectDB();
+    const params = await context.params;
     const body = await req.json();
     const validation = updateProductSchema.safeParse(body);
 
@@ -81,9 +83,10 @@ export const PUT = withAdmin(async (req, { params }) => {
 });
 
 // DELETE /api/products/:id - Admin only
-export const DELETE = withAdmin(async (_req, { params }) => {
+export const DELETE = withAdmin(async (_req, context) => {
   try {
     await connectDB();
+    const params = await context.params;
     const product = await Product.findByIdAndDelete(params.id);
 
     if (!product) {

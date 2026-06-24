@@ -62,12 +62,12 @@ export async function getAuthUser(req: NextRequest): Promise<JWTPayload | null> 
 
 export type AuthenticatedHandler = (
   req: NextRequest,
-  context: { params: Record<string, string> },
+  context: any,
   user: JWTPayload
 ) => Promise<NextResponse>;
 
 export function withAuth(handler: AuthenticatedHandler) {
-  return async (req: NextRequest, context: { params: Record<string, string> }) => {
+  return async (req: NextRequest, context: any) => {
     const user = await getAuthUser(req);
     if (!user) {
       return NextResponse.json(
@@ -80,7 +80,7 @@ export function withAuth(handler: AuthenticatedHandler) {
 }
 
 export function withAdmin(handler: AuthenticatedHandler) {
-  return async (req: NextRequest, context: { params: Record<string, string> }) => {
+  return async (req: NextRequest, context: any) => {
     const user = await getAuthUser(req);
     if (!user) {
       return NextResponse.json(

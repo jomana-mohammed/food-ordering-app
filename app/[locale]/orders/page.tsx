@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { useAuthStore } from "@/store/authStore";
 import StatusStepper from "@/components/StatusStepper";
 import StatusBadge from "@/components/StatusBadge";
@@ -29,11 +29,9 @@ interface Order {
   createdAt: string;
 }
 
-interface OrdersPageProps {
-  params: { locale: string };
-}
 
-export default function OrdersPage({ params: { locale } }: OrdersPageProps) {
+export default function OrdersPage() {
+  const locale = useLocale();
   const t = useTranslations("orders");
   const tPayment = useTranslations("orders.payment");
   const router = useRouter();

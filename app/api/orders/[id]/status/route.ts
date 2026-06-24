@@ -9,9 +9,10 @@ const updateStatusSchema = z.object({
 });
 
 // PUT /api/orders/:id/status - Admin only
-export const PUT = withAdmin(async (req: NextRequest, { params }) => {
+export const PUT = withAdmin(async (req: NextRequest, context: any) => {
   try {
     await connectDB();
+    const params = await context.params;
     const body = await req.json();
     const validation = updateStatusSchema.safeParse(body);
 

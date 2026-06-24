@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { useCartStore } from "@/store/cartStore";
 import { ProductCardSkeleton } from "@/components/LoadingSkeleton";
 import toast from "react-hot-toast";
@@ -27,11 +27,8 @@ const CATEGORY_ICONS: Record<string, string> = {
   Salads: "🥗",
 };
 
-interface HomePageProps {
-  params: { locale: string };
-}
-
-export default function HomePage({ params: { locale } }: HomePageProps) {
+export default function HomePage() {
+  const locale = useLocale();
   const t = useTranslations("home");
   const tCommon = useTranslations("common");
   const { addItem, openCart } = useCartStore();

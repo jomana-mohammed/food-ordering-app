@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { useRouter } from "next/navigation";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { useAuthStore } from "@/store/authStore";
 import toast from "react-hot-toast";
 import Image from "next/image";
@@ -47,7 +47,8 @@ interface Order {
 
 type TabType = "overview" | "products" | "orders";
 
-export default function AdminDashboard({ params: { locale } }: { params: { locale: string } }) {
+export default function AdminDashboard() {
+  const locale = useLocale();
   const t = useTranslations("admin");
   const tCommon = useTranslations("common");
   const tOrders = useTranslations("orders");

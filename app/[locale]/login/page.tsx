@@ -3,16 +3,13 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useAuthStore } from "@/store/authStore";
 import toast from "react-hot-toast";
 
-interface LoginPageProps {
-  params: { locale: string };
-}
 
 const loginSchema = z.object({
   email: z.string().email(),
@@ -21,7 +18,8 @@ const loginSchema = z.object({
 
 type LoginFormData = z.infer<typeof loginSchema>;
 
-export default function LoginPage({ params: { locale } }: LoginPageProps) {
+export default function LoginPage() {
+  const locale = useLocale();
   const t = useTranslations("auth.login");
   const router = useRouter();
   const { setUser } = useAuthStore();

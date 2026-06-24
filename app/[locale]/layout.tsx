@@ -1,5 +1,6 @@
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, setRequestLocale } from "next-intl/server";
+
 import { notFound } from "next/navigation";
 import { Toaster } from "react-hot-toast";
 import { locales, type Locale } from "@/i18n/request";
@@ -20,14 +21,17 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function LocaleLayout({
-  children,
-  params: { locale },
-}: {
+export default async function LocaleLayout(props: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
+  const { children } = props;
+  const params = await props.params;
+  const locale = params.locale;
+
   if (!locales.includes(locale as Locale)) notFound();
+
+  setRequestLocale(locale);
 
   const messages = await getMessages();
   const dir = locale === "ar" ? "rtl" : "ltr";

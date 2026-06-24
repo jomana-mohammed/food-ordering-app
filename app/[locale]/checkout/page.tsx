@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { loadStripe } from "@stripe/stripe-js";
 import {
   Elements,
@@ -21,9 +21,6 @@ const stripePromise = loadStripe(
   process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!
 );
 
-interface CheckoutPageProps {
-  params: { locale: string };
-}
 
 const checkoutSchema = z.object({
   street: z.string().min(5, "Street address must be at least 5 characters"),
@@ -137,7 +134,8 @@ function StripeCardForm({
   );
 }
 
-export default function CheckoutPage({ params: { locale } }: CheckoutPageProps) {
+export default function CheckoutPage() {
+  const locale = useLocale();
   const t = useTranslations("checkout");
   const router = useRouter();
   const { items, getTotalPrice, clearCart } = useCartStore();
